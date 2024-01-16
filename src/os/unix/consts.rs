@@ -72,6 +72,8 @@ mod posix {
             target_os = "openbsd",
             target_os = "netbsd",
 
+            target_os = "cygwin",
+
             target_os = "solaris",
             target_os = "illumos",
 
@@ -104,6 +106,8 @@ mod posix {
             target_os = "openbsd",
             target_os = "netbsd",
 
+            target_os = "cygwin",
+
             target_os = "solaris",
             target_os = "illumos",
 
@@ -133,6 +137,7 @@ mod posix {
             target_env = "uclibc",
             all(target_os = "linux", target_arch = "mips"),
             all(target_os = "linux", target_arch = "mips64"),
+            target_os = "cygwin",
         ))] {
             pub(super) const RTLD_GLOBAL: c_int = 4;
         } else if #[cfg(any(
@@ -182,6 +187,8 @@ mod posix {
             target_os = "freebsd",
             target_os = "dragonfly",
             target_os = "openbsd",
+
+            target_os = "cygwin",
 
             target_os = "haiku",
 
